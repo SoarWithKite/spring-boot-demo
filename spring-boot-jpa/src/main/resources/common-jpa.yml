@@ -1,0 +1,30 @@
+# JPA配置，驼峰命名是自动的
+spring:
+  jpa:
+    # 是否将执行的sql语句显示到控制台,正式环境建议关闭
+    show-sql: true
+    database: mysql
+    hibernate:
+      # Hibernate ddl auto 参数用来配置是否开启自动更新数据库表结构，可取create、create-drop、update、validate、none五个值
+      #create 每次加载hibernate时，先删除已存在的数据库表结构再重新生成；
+      #create-drop 每次加载hibernate时，先删除已存在的数据库表结构再重新生成，当sessionFactory关闭时也会先删除已存在的数据库表结构再重新生成
+      #update 只在第一次加载hibernate时自动生成数据库表结构，以后再次加载hibernate时根据model类自动更新表结构；
+      #validate 每次加载hibernate时，验证数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。
+      #none 什么都不做
+      ddl-auto: update
+      naming:
+        #隐式命名策略：隐式命名策略用于生成默认的表名和列名，即在没有显式指定表名和列名的情况下，Hibernate 如何命名。用于生成默认的表名和列名。
+        #ImplicitNamingStrategyLegacyJpaImpl：使用传统的 JPA 命名规则，直接将实体类名作为表名，将属性名作为列名，不做任何修改。
+        #ImplicitNamingStrategyJpaCompliantImpl：遵循 JPA 2.0 命名规则，表名和列名默认是小写形式。
+        #ImplicitNamingStrategyComponentPathImpl：基于组件路径的命名策略，主要用于复杂的嵌套属性。
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        #物理命名策略：物理命名策略用于修改从隐式命名策略生成的表名和列名，在最终写入数据库之前进一步处理这些名称。用于在写入数据库前修改表名和列名。
+        #PhysicalNamingStrategyStandardImpl：这是默认的物理命名策略，不做任何修改，直接使用隐式命名策略生成的名称。即表名和列名保持不变。
+        #SpringPhysicalNamingStrategy：Spring Boot 提供的命名策略，遵循 Spring 的命名约定，会将驼峰命名法转换为下划线分隔的小写形式。即表名和列名会从驼峰命名转换为下划线分隔的小写形式。
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties:
+      hibernate:
+        # 在控制台显示jpa生成的sql
+        show_sql: true
+        # 控制台显示生成的sql的时候进行格式化
+        format_sql: true
