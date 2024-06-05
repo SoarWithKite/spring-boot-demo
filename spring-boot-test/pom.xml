@@ -9,7 +9,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>Test</artifactId>
+    <artifactId>spring-boot-test</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zhiyuan</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>spring-boot-common</artifactId>
             <version>0.0.1</version>
         </dependency>
         <dependency>
@@ -36,6 +36,15 @@
             <groupId>com.zhiyuan</groupId>
             <artifactId>spring-boot-mybatis-plus</artifactId>
             <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
         </dependency>
     </dependencies>
 

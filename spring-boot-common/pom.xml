@@ -9,7 +9,12 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>spring-boot-mybatis-plus</artifactId>
+    <artifactId>spring-boot-common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-boot-response</module>
+        <module>spring-boot-core</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,19 +24,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.zhiyuan</groupId>
-            <artifactId>spring-boot-core</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.zhiyuan</groupId>
-            <artifactId>spring-boot-response</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

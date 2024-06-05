@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zhiyuan</groupId>
-        <artifactId>spring-boot-demo</artifactId>
+        <artifactId>spring-boot-common</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>spring-boot-jpa</artifactId>
+    <artifactId>spring-boot-response</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,15 +17,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.zhiyuan</groupId>
-            <artifactId>spring-boot-core</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-    </dependencies>
 </project>
