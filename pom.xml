@@ -10,11 +10,9 @@
     <name>spring-boot-demo</name>
     <description>纸鸢</description>
     <modules>
-
-        <module>spring-boot-jpa</module>
         <module>spring-boot-common</module>
-        <module>spring-boot-mybatis-plus</module>
-        <module>spring-boot-test</module>
+        <module>spring-boot-system</module>
+        <module>spring-boot-api</module>
     </modules>
 
     <properties>

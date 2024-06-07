@@ -6,7 +6,6 @@ package com.zhiyuan;
 
 public class ReplaceCharacters {
 
-
     public static void main(String[] args) {
         String input = "444121321326121321326121321326";
         String result = replaceCharacters(input);
