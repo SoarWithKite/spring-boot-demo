@@ -23,6 +23,22 @@ spring:
       maximum-pool-size: 20
       # 最小空闲线程数量
       minimum-idle: 10
+
+  #redis配置
+  data:
+    redis:
+      database: 1
+      host: 127.0.0.1
+      lettuce:
+        pool:
+          max-active: 100
+          max-idle: 10
+          max-wait: 50ms
+          min-idle: 5
+      password: lingyi.1024
+      port: 16379
+      timeout: 10s
+
 # MyBatisPlus配置
 # https://baomidou.com/config/
 mybatis-plus:

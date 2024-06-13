@@ -19,17 +19,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.zhiyuan</groupId>
-            <artifactId>spring-boot-common</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
             <groupId>com.zhiyuan</groupId>
             <artifactId>spring-boot-jpa</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zhiyuan</groupId>
+            <artifactId>spring-boot-redis</artifactId>
             <version>0.0.1</version>
         </dependency>
         <dependency>

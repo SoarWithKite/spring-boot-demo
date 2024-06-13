@@ -5,20 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zhiyuan</groupId>
-        <artifactId>spring-boot-demo</artifactId>
+        <artifactId>spring-boot-common</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>spring-boot-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-boot-response</module>
-        <module>spring-boot-core</module>
-        <module>spring-boot-jpa</module>
-        <module>spring-boot-mybatis-plus</module>
-        <module>spring-boot-sa-token</module>
-        <module>spring-boot-redis</module>
-    </modules>
+    <artifactId>spring-boot-redis</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -29,17 +20,8 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>
